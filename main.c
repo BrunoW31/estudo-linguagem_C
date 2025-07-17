@@ -3,25 +3,70 @@
 
 int main()
 {
-    int n1 = 10;
-    int n2 = 10;
-    char c1 = 'va';
-    char c2 = 'hb';
+    float num1, num2, result;
+    char op;
 
-    printf("Valor de n1: %d, endereço: %d\n", n1, &n1);
-    printf("Valor de n2: %d, endereço: %d\n", n2, &n2);
-    printf("Valor de c1: %c, endereço: %d\n", c1, &c1);
-    printf("Valor de c2: %c, endereço: %d\n", c2, &c2);
+    //printf("\nComandos\n1. +\n2. -\n3. *\n4. /\n");
 
-    n1 = 190;
-    n2 = 1090;
-    c1 = 'cb';
-    c2 = 'jg';
+    /*
+    DESCRIÇÃO - LINHA POR LINHA
+    printf("Entre com um numero: ");
+    scanf(" %f", &num1);
+    printf("Entre com o operador: ");
+    scanf(" %c", &op);
+    printf("Digite o segundo numero: ");
+    scanf(" %f", &num2);
+*/
 
-    printf("Valor de n1: %d, endereço: %d\n", n1, &n1);
-    printf("Valor de n2: %d, endereço: %d\n", n2, &n2);
-    printf("Valor de c1: %c, endereço: %d\n", c1, &c1);
-    printf("Valor de c2: %c, endereço: %d\n", c2, &c2);
+    // OPERAÇÃO EM UMA SÓ LINHA
+    printf(" Entre com o calculo: ");
+    scanf(" %f%c%f", &num1,&op,&num2);
 
+    switch(op){
+        case '+':
+            result = num1 + num2;
+            printf(" Resposta da soma de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf(" Resposta da subtracao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf(" Resposrta da multiplicacao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case '/':
+            result = num1 / num2;
+            printf(" Resposta da divisao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        default:
+            printf("Comando errado, comece novamente!!");
+    }
     return 0;
+
+    /*
+    TESTE COM OP = NUMERO
+
+    switch(op){
+        case 1:
+            result = num1 + num2;
+            printf(" Resposta da soma de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case 2:
+            result = num1 - num2;
+            printf(" Resposta da subtracao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case 3:
+            result = num1 * num2;
+            printf(" Resposrta da multiplicacao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        case 4:
+            result = num1 / num2;
+            printf(" Resposta da divisao de %.2f + %.2f = %.2f", num1, num2, result);
+            break;
+        default:
+            printf("Comando errado, comece novamente!!");
+    }
+    */
+
 }
