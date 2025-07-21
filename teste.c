@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <strings.h>
-#define TAM 100
+#include <string.h>
 
-int main()
+int main() 
 {
-    char url[] = "/etc/default/zramswap";
-    FILE *arqv = fopen(url, "r");
-    char ler[TAM];
-    int i = 0;
+    char teste;
+    char teste2;
 
-    if(arqv){
-        for( i=0; i<=21; i++ ){
-        fgets(ler, TAM, arqv);
-        printf("%s", ler);
-        }
-        fclose(arqv);
-    }else{
-        printf("Erro ao abrir arquivo!");
-    }
+    // printf("Digite um caractere: ");
+    // teste = getc(stdin);
+    
+    printf("Digite outro caracter:");
+    teste2 = getchar();
+    
+    //printf("Você digitou: %c com getc\n", teste);
+    printf("Você digitou: %c com getchar\n", teste2);
+    
+
+
     return 0;
 }
